@@ -14,19 +14,25 @@ import { CoreUtils } from "@core/core-utils";
 //   );
 
 interface MoviesListState {
-  shows: any;
+  isLoading:            boolean;
+  shows:                any;
+  wasInitialDataLoaded: boolean; // necessary because getInitialProps is called again if clicking on link which redirects to same route and same component
 }
 interface MoviesListProps {
-  shows: any;
-}
+  shouldLoadData: boolean;
+  shows:          any;
+ }
 
 export default class MoviesList extends React.Component<MoviesListProps, MoviesListState> {
 
   constructor(props: MoviesListProps) {
     super(props);
 
+    // default to whatever is coming through props
     this.state = {
-      shows: props.shows,
+      isLoading:            false,
+      shows:                this.props.shows,
+      wasInitialDataLoaded: !this.props.shouldLoadData,
     };
 
     console.log('constructor');
@@ -34,14 +40,28 @@ export default class MoviesList extends React.Component<MoviesListProps, MoviesL
     CoreUtils.bindAll(this);
   }
 
-  public componentDidUpdate() {
+  public componentDidUpdate(prevProps: MoviesListProps) {
     console.log('componentDidUpdate');
+    if (!this.state.wasInitialDataLoaded && prevProps.shouldLoadData != this.props.shouldLoadData && !this.props.shouldLoadData) {
+      this._loadData();
+    }
+  }
+
+  public componentDidMount() {
+    console.log('componentDidMount');
+    if (this.props.shouldLoadData) {
+      this._loadData();
+    }
   }
 
   public render() {
     console.log('render');
     return (
       <MyLayout>
+        { // if
+          this.state.isLoading &&
+          <div>Loading...</div>
+        }
         <h1>Batchman TV Shows</h1>
         <ul>
             {this.state.shows.map(({show}) => (
@@ -80,25 +100,42 @@ export default class MoviesList extends React.Component<MoviesListProps, MoviesL
     );
   }
 
-  private async _onTestAJAXClick() {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=superman');
-    const data = await res.json();
+  private _onTestAJAXClick() {
+    this._loadData();
+  }
+
+  private async _loadData() {
     this.setState({
-      shows: data,
-    })
+      isLoading: true,
+      shows:     [],
+    });
+
+    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+    const data = await res.json();
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+        shows:     data,
+      });
+    }, 750);
   }
 }
 
 MoviesList.getInitialProps = async function({ req }): Promise<MoviesListProps> {
   
   let data = [];
+  let shouldLoadData = true;
+
   if (req != undefined) {
+
+    // request is being made server side, do not load data after render
     const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
     data = await res.json()
-    console.log(`Show data fetched. Count: ${data.length}`)
+    shouldLoadData = false;
   }
 
   return {
-      shows: data
+    shouldLoadData: shouldLoadData,
+    shows:          data,
   };
 }
