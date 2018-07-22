@@ -10,12 +10,23 @@ app.prepare()
   const server = express()
 
   server.get('/posts', (req, res) => {
-    const actualPage = '/posts/index'
+    const actualPage = '/posts/list'
     app.render(req, res, actualPage)
   })
 
   server.get('/posts/:id', (req, res) => {
     const actualPage = '/posts/show'
+    const queryParams = { id: req.params.id } 
+    app.render(req, res, actualPage, queryParams)
+  })
+
+  server.get('/movies', (req, res) => {
+    const actualPage = '/movies/list'
+    app.render(req, res, actualPage)
+  })
+
+  server.get('/movies/:id', (req, res) => {
+    const actualPage = '/movies/show'
     const queryParams = { id: req.params.id } 
     app.render(req, res, actualPage, queryParams)
   })

@@ -1,10 +1,29 @@
-const withTypescript = require('@zeit/next-typescript');
+const withTypescript             = require('@zeit/next-typescript');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const TsconfigPathsPlugin        = require('tsconfig-paths-webpack-plugin');
 
 module.exports = withTypescript({
+
+    // override webpack configurations below
     webpack(config, options) {
-        // Do not run type checking twice:
-        if (options.isServer) config.plugins.push(new ForkTsCheckerWebpackPlugin())
-      return config
+
+        // do not run type checking twice:
+        if (options.isServer) {
+
+            // forks type checking to separate thread from compilation
+            config.plugins.push(new ForkTsCheckerWebpackPlugin());
+        }
+        
+        // inform resolver to handle TS and JS file formats
+        config.resolve.extensions = ['.ts', '.tsx', '.js', '.json'];
+
+        // copies tsconfig.json aliases into webpack's aliases
+        config.resolve.plugins = [
+            new TsconfigPathsPlugin({
+              configFile: './tsconfig.json',
+              logLevel:   'info',
+            })];
+
+      return config;
     }
   });

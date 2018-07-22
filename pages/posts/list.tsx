@@ -4,7 +4,7 @@ Commented code below shows how to use getInitialData to get data from server
 -------------------------------------------------------------------
 */
 
-import MyLayout from "../../components/my-layout";
+import MyLayout from "@components/my-layout";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 
