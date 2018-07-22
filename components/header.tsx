@@ -18,7 +18,7 @@ const Header = () => (
         <Link href="/posts">
           <a style={linkStyle}>Posts</a>
         </Link>
-        <Link href="/shows-list-page">
+        <Link href="/shows/shows-list-page" as="/shows">
           <a style={linkStyle}>Shows</a>
         </Link>
     </div>
