@@ -10,18 +10,18 @@ app.prepare()
   const server = express()
 
   server.get('/posts', (req, res) => {
-    const actualPage = '/posts/list'
+    const actualPage = '/list'
     app.render(req, res, actualPage)
   })
 
   server.get('/posts/:id', (req, res) => {
-    const actualPage = '/posts/show'
+    const actualPage = '/show'
     const queryParams = { id: req.params.id } 
     app.render(req, res, actualPage, queryParams)
   })
 
   server.get('/movies', (req, res) => {
-    const actualPage = '/movies/list'
+    const actualPage = '/list'
     app.render(req, res, actualPage)
   })
 

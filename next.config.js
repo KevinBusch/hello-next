@@ -2,7 +2,7 @@ const withTypescript             = require('@zeit/next-typescript');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const TsconfigPathsPlugin        = require('tsconfig-paths-webpack-plugin');
 
-module.exports = withTypescript({
+const nextConfig = withTypescript({
 
     // override webpack configurations below
     webpack(config, options) {
@@ -26,4 +26,6 @@ module.exports = withTypescript({
 
       return config;
     }
-  });
+});
+// nextConfig.useFileSystemPublicRoutes = false;
+module.exports = nextConfig;

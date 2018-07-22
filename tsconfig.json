@@ -19,7 +19,8 @@
         "es2016"
       ],
       "paths": {
-          "@components/*": [ "./components/*"]
+          "@components/*": [ "./components/*"],
+          "@core/*": [ "./core/*"]
       }
     }
   }

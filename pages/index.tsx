@@ -1,4 +1,4 @@
-import MyLayout from '../components/my-layout'
+import MyLayout from '@components/my-layout'
 import React from 'react';
 
   export default () => (
