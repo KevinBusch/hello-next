@@ -1,4 +1,5 @@
 import MyLayout               from '@components/my-layout';
+// import { Context }            from 'next';
 import Link                   from 'next/link';
 import fetch                  from 'isomorphic-unfetch';
 import React                  from 'react';
@@ -24,6 +25,32 @@ interface ShowsListPageProps {
 
 export default class ShowsListPage extends React.PureComponent<ShowsListPageProps, ShowsListPageState> {
 
+  /*
+  -------------------------------------------------------------------------------
+  Server Side Rendering
+  -------------------------------------------------------------------------------
+  */
+  
+  static async getInitialProps ({ req }): Promise<ShowsListPageProps> {
+    
+    let searchResults  = null;
+    let shouldLoadData = true;
+
+    if (req != undefined) {
+
+      // request is being made server side, load data now but not after render
+      const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+      searchResults = await res.json()
+      shouldLoadData = false;
+    }
+
+    return {
+      shouldLoadData: shouldLoadData,
+      searchResults:  searchResults,
+    };
+  }
+
+  
   /*
   -------------------------------------------------------------------------------
   Constructor
@@ -140,30 +167,4 @@ export default class ShowsListPage extends React.PureComponent<ShowsListPageProp
       });
     }, 750);
   }
-}
-
-
-/*
--------------------------------------------------------------------------------
-Server Side Rendering
--------------------------------------------------------------------------------
-*/
- 
-ShowsListPage.getInitialProps = async function({ req }): Promise<ShowsListPageProps> {
-  
-  let searchResults  = null;
-  let shouldLoadData = true;
-
-  if (req != undefined) {
-
-    // request is being made server side, do not load data after render
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-    searchResults = await res.json()
-    shouldLoadData = false;
-  }
-
-  return {
-    shouldLoadData: shouldLoadData,
-    searchResults:  searchResults,
-  };
 }
