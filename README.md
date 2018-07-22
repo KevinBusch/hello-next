@@ -5,6 +5,14 @@
 
 ... done
 
+## Documentation References
+
+Next JS
+- https://nextjs.org/learn/basics/getting-started
+
+... with Typescript!
+- https://www.npmjs.com/package/@zeit/next-typescript
+
 ## Getting-Started
 
 Install NPM dependencies
