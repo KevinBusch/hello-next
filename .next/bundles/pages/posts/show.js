@@ -3,7 +3,7 @@ __NEXT_REGISTER_PAGE('/posts/show', function() {
           var comp =
       webpackJsonp([4],{
 
-/***/ "./components/header.jsx":
+/***/ "./components/header.tsx":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11,7 +11,7 @@ __NEXT_REGISTER_PAGE('/posts/show', function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link__ = __webpack_require__("./node_modules/next/link.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_link___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_link__);
-var _jsxFileName = "C:\\myprojects\\hello-next\\components\\header.jsx";
+var _jsxFileName = "C:\\myprojects\\hello-next\\components\\header.tsx";
 
 
 var linkStyle = {
@@ -55,14 +55,14 @@ var Header = function Header() {
 
 /***/ }),
 
-/***/ "./components/my-layout.jsx":
+/***/ "./components/my-layout.tsx":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header__ = __webpack_require__("./components/header.jsx");
-var _jsxFileName = "C:\\myprojects\\hello-next\\components\\my-layout.jsx";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__header__ = __webpack_require__("./components/header.tsx");
+var _jsxFileName = "C:\\myprojects\\hello-next\\components\\my-layout.tsx";
 
 
 var layoutStyle = {
@@ -11232,7 +11232,7 @@ function extend() {
 
 /***/ }),
 
-/***/ "./pages/posts/show.jsx":
+/***/ "./pages/posts/show.tsx":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11241,12 +11241,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_my_layout__ = __webpack_require__("./components/my-layout.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_my_layout__ = __webpack_require__("./components/my-layout.tsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_router__ = __webpack_require__("./node_modules/next/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_next_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_next_router__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_markdown__ = __webpack_require__("./node_modules/react-markdown/lib/react-markdown.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_markdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_markdown__);
-var _jsxFileName = "C:\\myprojects\\hello-next\\pages\\posts\\show.jsx";
+var _jsxFileName = "C:\\myprojects\\hello-next\\pages\\posts\\show.tsx";
 
 
 
@@ -11301,7 +11301,7 @@ Commented code below shows how to use getInitialData to get data from server
     }
   })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
     styleId: "3267370368",
-    css: ".markdown{font-family:'Arial';}.markdown a{-webkit-text-decoration:none;text-decoration:none;color:blue;}.markdown a:hover{opacity:0.6;}.markdown h3{margin:0;padding:0;text-transform:uppercase;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxwb3N0c1xcc2hvdy5qc3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBK0NzQixBQUc0QixBQUlDLEFBS1QsQUFJSCxTQUNDLEdBSlosT0FLMkIsQ0FkM0Isd0JBZUEsTUFYYSxXQUNiIiwiZmlsZSI6InBhZ2VzXFxwb3N0c1xcc2hvdy5qc3giLCJzb3VyY2VSb290IjoiQzpcXG15cHJvamVjdHNcXGhlbGxvLW5leHQiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBcclxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxyXG5Db21tZW50ZWQgY29kZSBiZWxvdyBzaG93cyBob3cgdG8gdXNlIGdldEluaXRpYWxEYXRhIHRvIGdldCBkYXRhIGZyb20gc2VydmVyXHJcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cclxuKi9cclxuXHJcbi8vIGltcG9ydCB7d2l0aFJvdXRlcn0gZnJvbSBcIm5leHQvcm91dGVyXCI7XHJcbi8vIGltcG9ydCBNeUxheW91dCBmcm9tIFwiLi4vLi4vY29tcG9uZW50cy9teS1sYXlvdXRcIjtcclxuXHJcbi8vIGNvbnN0IFBvc3QgPSAocHJvcHMpID0+IChcclxuLy8gICAgIDxNeUxheW91dD5cclxuLy8gICAgIDxoMT57cHJvcHMuc2hvdy5uYW1lfTwvaDE+XHJcbi8vICAgICA8cD57cHJvcHMuc2hvdy5zdW1tYXJ5LnJlcGxhY2UoLzxbL10/cD4vZywgJycpfTwvcD5cclxuLy8gICAgIDxpbWcgc3JjPXtwcm9wcy5zaG93LmltYWdlLm1lZGl1bX0vPlxyXG4vLyAgICAgPC9NeUxheW91dD5cclxuLy8gKVxyXG5cclxuLy8gUG9zdC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyBmdW5jdGlvbiAoY29udGV4dCkge1xyXG4vLyAgICAgY29uc3QgeyBpZCB9ID0gY29udGV4dC5xdWVyeVxyXG4vLyAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vYXBpLnR2bWF6ZS5jb20vc2hvd3MvJHtpZH1gKVxyXG4vLyAgICAgY29uc3Qgc2hvdyA9IGF3YWl0IHJlcy5qc29uKClcclxuICBcclxuLy8gICAgIGNvbnNvbGUubG9nKGBGZXRjaGVkIHNob3c6ICR7c2hvdy5uYW1lfWApXHJcbiAgXHJcbi8vICAgICByZXR1cm4geyBzaG93IH1cclxuLy8gICB9XHJcbiAgXHJcbi8vIGV4cG9ydCBkZWZhdWx0IFBvc3RcclxuXHJcbmltcG9ydCBNeUxheW91dCBmcm9tICcuLi8uLi9jb21wb25lbnRzL215LWxheW91dCdcclxuaW1wb3J0IHt3aXRoUm91dGVyfSBmcm9tICduZXh0L3JvdXRlcidcclxuaW1wb3J0IE1hcmtkb3duIGZyb20gJ3JlYWN0LW1hcmtkb3duJ1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgd2l0aFJvdXRlcigocHJvcHMpID0+IChcclxuICA8TXlMYXlvdXQ+XHJcbiAgIDxoMT57cHJvcHMucm91dGVyLnF1ZXJ5LnRpdGxlfTwvaDE+XHJcbiAgIDxkaXYgY2xhc3NOYW1lPVwibWFya2Rvd25cIj5cclxuICAgICA8TWFya2Rvd24gc291cmNlPXtgXHJcblRoaXMgaXMgb3VyIGJsb2cgcG9zdC5cclxuWWVzLiBXZSBjYW4gaGF2ZSBhIFtsaW5rXSgvbGluaykuXHJcbkFuZCB3ZSBjYW4gaGF2ZSBhIHRpdGxlIGFzIHdlbGwuXHJcblxyXG4jIyMgVGhpcyBpcyBhIHRpdGxlXHJcblxyXG5BbmQgaGVyZSdzIHRoZSBjb250ZW50LlxyXG4gICAgIGB9Lz5cclxuICAgPC9kaXY+XHJcbiAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXHJcbiAgICAgLm1hcmtkb3duIHtcclxuICAgICAgIGZvbnQtZmFtaWx5OiAnQXJpYWwnO1xyXG4gICAgIH1cclxuXHJcbiAgICAgLm1hcmtkb3duIGEge1xyXG4gICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgICAgY29sb3I6IGJsdWU7XHJcbiAgICAgfVxyXG5cclxuICAgICAubWFya2Rvd24gYTpob3ZlciB7XHJcbiAgICAgICBvcGFjaXR5OiAwLjY7XHJcbiAgICAgfVxyXG5cclxuICAgICAubWFya2Rvd24gaDMge1xyXG4gICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICAgcGFkZGluZzogMDtcclxuICAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgICAgfVxyXG4gIGB9PC9zdHlsZT5cclxuICA8L015TGF5b3V0PlxyXG4pKTtcclxuIl19 */\n/*@ sourceURL=pages\\posts\\show.jsx */"
+    css: ".markdown{font-family:'Arial';}.markdown a{-webkit-text-decoration:none;text-decoration:none;color:blue;}.markdown a:hover{opacity:0.6;}.markdown h3{margin:0;padding:0;text-transform:uppercase;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxwb3N0c1xcc2hvdy50c3giXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBK0NzQixBQUc0QixBQUlDLEFBS1QsQUFJSCxTQUNDLEdBSlosT0FLMkIsQ0FkM0Isd0JBZUEsTUFYYSxXQUNiIiwiZmlsZSI6InBhZ2VzXFxwb3N0c1xcc2hvdy50c3giLCJzb3VyY2VSb290IjoiQzpcXG15cHJvamVjdHNcXGhlbGxvLW5leHQiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBcclxuLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxyXG5Db21tZW50ZWQgY29kZSBiZWxvdyBzaG93cyBob3cgdG8gdXNlIGdldEluaXRpYWxEYXRhIHRvIGdldCBkYXRhIGZyb20gc2VydmVyXHJcbi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cclxuKi9cclxuXHJcbi8vIGltcG9ydCB7d2l0aFJvdXRlcn0gZnJvbSBcIm5leHQvcm91dGVyXCI7XHJcbi8vIGltcG9ydCBNeUxheW91dCBmcm9tIFwiLi4vLi4vY29tcG9uZW50cy9teS1sYXlvdXRcIjtcclxuXHJcbi8vIGNvbnN0IFBvc3QgPSAocHJvcHMpID0+IChcclxuLy8gICAgIDxNeUxheW91dD5cclxuLy8gICAgIDxoMT57cHJvcHMuc2hvdy5uYW1lfTwvaDE+XHJcbi8vICAgICA8cD57cHJvcHMuc2hvdy5zdW1tYXJ5LnJlcGxhY2UoLzxbL10/cD4vZywgJycpfTwvcD5cclxuLy8gICAgIDxpbWcgc3JjPXtwcm9wcy5zaG93LmltYWdlLm1lZGl1bX0vPlxyXG4vLyAgICAgPC9NeUxheW91dD5cclxuLy8gKVxyXG5cclxuLy8gUG9zdC5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyBmdW5jdGlvbiAoY29udGV4dCkge1xyXG4vLyAgICAgY29uc3QgeyBpZCB9ID0gY29udGV4dC5xdWVyeVxyXG4vLyAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vYXBpLnR2bWF6ZS5jb20vc2hvd3MvJHtpZH1gKVxyXG4vLyAgICAgY29uc3Qgc2hvdyA9IGF3YWl0IHJlcy5qc29uKClcclxuICBcclxuLy8gICAgIGNvbnNvbGUubG9nKGBGZXRjaGVkIHNob3c6ICR7c2hvdy5uYW1lfWApXHJcbiAgXHJcbi8vICAgICByZXR1cm4geyBzaG93IH1cclxuLy8gICB9XHJcbiAgXHJcbi8vIGV4cG9ydCBkZWZhdWx0IFBvc3RcclxuXHJcbmltcG9ydCBNeUxheW91dCBmcm9tICcuLi8uLi9jb21wb25lbnRzL215LWxheW91dCdcclxuaW1wb3J0IHt3aXRoUm91dGVyfSBmcm9tICduZXh0L3JvdXRlcidcclxuaW1wb3J0IE1hcmtkb3duIGZyb20gJ3JlYWN0LW1hcmtkb3duJ1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgd2l0aFJvdXRlcigocHJvcHMpID0+IChcclxuICA8TXlMYXlvdXQ+XHJcbiAgIDxoMT57cHJvcHMucm91dGVyLnF1ZXJ5LnRpdGxlfTwvaDE+XHJcbiAgIDxkaXYgY2xhc3NOYW1lPVwibWFya2Rvd25cIj5cclxuICAgICA8TWFya2Rvd24gc291cmNlPXtgXHJcblRoaXMgaXMgb3VyIGJsb2cgcG9zdC5cclxuWWVzLiBXZSBjYW4gaGF2ZSBhIFtsaW5rXSgvbGluaykuXHJcbkFuZCB3ZSBjYW4gaGF2ZSBhIHRpdGxlIGFzIHdlbGwuXHJcblxyXG4jIyMgVGhpcyBpcyBhIHRpdGxlXHJcblxyXG5BbmQgaGVyZSdzIHRoZSBjb250ZW50LlxyXG4gICAgIGB9Lz5cclxuICAgPC9kaXY+XHJcbiAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXHJcbiAgICAgLm1hcmtkb3duIHtcclxuICAgICAgIGZvbnQtZmFtaWx5OiAnQXJpYWwnO1xyXG4gICAgIH1cclxuXHJcbiAgICAgLm1hcmtkb3duIGEge1xyXG4gICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG4gICAgICAgY29sb3I6IGJsdWU7XHJcbiAgICAgfVxyXG5cclxuICAgICAubWFya2Rvd24gYTpob3ZlciB7XHJcbiAgICAgICBvcGFjaXR5OiAwLjY7XHJcbiAgICAgfVxyXG5cclxuICAgICAubWFya2Rvd24gaDMge1xyXG4gICAgICAgbWFyZ2luOiAwO1xyXG4gICAgICAgcGFkZGluZzogMDtcclxuICAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgICAgfVxyXG4gIGB9PC9zdHlsZT5cclxuICA8L015TGF5b3V0PlxyXG4pKTtcclxuIl19 */\n/*@ sourceURL=pages\\posts\\show.tsx */"
   }));
 }));
     (function (Component, route) {
@@ -11329,7 +11329,7 @@ Commented code below shows how to use getInitialData to get data from server
 /***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/posts/show.jsx");
+module.exports = __webpack_require__("./pages/posts/show.tsx");
 
 
 /***/ })
