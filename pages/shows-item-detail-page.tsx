@@ -112,15 +112,6 @@ export default class ShowsItemDetailPage extends React.PureComponent<ShowsItemDe
   }
 }
 
-// ShowsItemDetailPage.getInitialProps = async function (context): Promise<ShowsItemDetailPageProps> {
-//   const { id } = context.query
-//   const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-//   const show = await res.json()
-
-//   console.log(`Fetched show: ${show.name}`)
-
-//   return { show }
-// }
 
 /*
 -------------------------------------------------------------------------------
