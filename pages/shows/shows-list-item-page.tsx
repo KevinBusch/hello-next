@@ -11,18 +11,18 @@ Interfaces
 -------------------------------------------------------------------------------
 */
 
-interface ShowsItemDetailPageState {
+interface ShowsListItemPageState {
   isLoading:            boolean;
   show:                 TvMazeShow;
   wasInitialDataLoaded: boolean; // necessary because getInitialProps is called again if clicking on link which redirects to same route and same component
 }
-interface ShowsItemDetailPageProps {
+interface ShowsListItemPageProps {
   id:             string;
   shouldLoadData: boolean;
   show:           TvMazeShow;
  }
 
-export default class ShowsItemDetailPage extends React.PureComponent<ShowsItemDetailPageProps, ShowsItemDetailPageState> {
+export default class ShowsListItemPage extends React.PureComponent<ShowsListItemPageProps, ShowsListItemPageState> {
 
 
   /*
@@ -31,7 +31,7 @@ export default class ShowsItemDetailPage extends React.PureComponent<ShowsItemDe
   -------------------------------------------------------------------------------
   */
   
-  static async getInitialProps (context): Promise<ShowsItemDetailPageProps> {
+  static async getInitialProps (context): Promise<ShowsListItemPageProps> {
     
     let show           = null;
     let shouldLoadData = true;
@@ -59,7 +59,7 @@ export default class ShowsItemDetailPage extends React.PureComponent<ShowsItemDe
   -------------------------------------------------------------------------------
   */
 
-  constructor(props: ShowsItemDetailPageProps) {
+  constructor(props: ShowsListItemPageProps) {
     super(props);
 
     // default to whatever is coming through props
@@ -79,7 +79,7 @@ export default class ShowsItemDetailPage extends React.PureComponent<ShowsItemDe
   -------------------------------------------------------------------------------
   */
 
-  public componentDidUpdate(prevProps: ShowsItemDetailPageProps) {
+  public componentDidUpdate(prevProps: ShowsListItemPageProps) {
     if (!this.state.wasInitialDataLoaded && prevProps.shouldLoadData != this.props.shouldLoadData && !this.props.shouldLoadData) {
       // ??
       console.log('componentDidMount.loadData()');

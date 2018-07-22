@@ -106,7 +106,7 @@ export default class ShowsListPage extends React.PureComponent<ShowsListPageProp
               <ul>
                 {this.state.searchResults.map(({show}) => (
                   <li key={show.id}>
-                    <Link as={`/shows/${show.id}`} href={`/shows/shows-item-detail-page?id=${show.id}`}>
+                    <Link as={`/shows/${show.id}`} href={`/shows/shows-list-item-page?id=${show.id}`}>
                         <a>{show.name}</a>
                     </Link>
                   </li>
