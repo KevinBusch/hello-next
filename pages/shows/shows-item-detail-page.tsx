@@ -31,7 +31,7 @@ export default class ShowsItemDetailPage extends React.PureComponent<ShowsItemDe
   -------------------------------------------------------------------------------
   */
   
-  async getInitialProps (context): Promise<ShowsItemDetailPageProps> {
+  static async getInitialProps (context): Promise<ShowsItemDetailPageProps> {
     
     let show           = null;
     let shouldLoadData = true;
