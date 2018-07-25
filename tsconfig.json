@@ -16,11 +16,16 @@
       "baseUrl": ".",
       "lib": [
         "dom",
+        "es2015",
         "es2016"
       ],
       "paths": {
           "@components/*": [ "./components/*"],
           "@core/*": [ "./core/*"]
-      }
+      },
+      "typeRoots": [
+        "./node_modules/@types",
+        "./typings"
+      ]
     }
   }

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "next build",
-    "dev": "node server.js",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "dev": "nodemon server/index.ts",
+    "start-NEW": "NODE_ENV=production node .next/production-server/index.js",
     "start": "next start -p 8000",
     "start-unix": "next start -p $PORT",
     "start-windows": "next start -p %PORT%",
@@ -15,22 +16,27 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/next": "^6.0.4",
-    "@types/react": "^16.4.6",
-    "@types/react-dom": "^16.0.6",
-    "@types/styled-jsx": "^2.2.3",
+    "@babel/core": "^7.0.0-beta.54",
     "@zeit/next-typescript": "^1.1.0",
+    "babel-loader": "^7.1.5",
     "express": "^4.16.3",
-    "fork-ts-checker-webpack-plugin": "^0.4.3",
     "isomorphic-unfetch": "^2.1.0",
     "next": "^6.1.1",
     "next-routes": "^1.4.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-markdown": "^3.3.4",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "typescript-babel-jest": "^1.0.5"
   },
   "devDependencies": {
+    "@types/next": "^6.0.4",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/styled-jsx": "^2.2.3",
+    "fork-ts-checker-webpack-plugin": "^0.4.3",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0"
   }
 }
