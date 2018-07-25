@@ -23,7 +23,7 @@ export default class Chat extends React.PureComponent<any, ChatState> {
 		console.log("chat.tsx", "render");
 		return (
 			<div>
-					<button onClick = {this._onClick}>Do something awesome</button>
+					<button onClick = {this._onClick}>Chat something</button>
 					{
 						this.state.items.map((item, index) => (
 							<div key={index}>{item}</div>
@@ -34,6 +34,6 @@ export default class Chat extends React.PureComponent<any, ChatState> {
 	}
 
 	private _onClick() {
-		this.setState({ items: [].concat(this.state.items, `Doing something awesome${this.state.items.length}`) });
+		this.setState({ items: [].concat(this.state.items, `Chating something up for the ${this.state.items.length}th time!`) });
 	}
 }
