@@ -1,3 +1,6 @@
+// REFERENCE: passport token / cookies usage server side ----- see: https://github.com/zeit/next.js/issues/2252
+// REFERENCE: global styles ----- see: https://github.com/zeit/next.js/wiki/Global-styles-and-layouts
+
 // _document is only rendered on the server side and not on the client side
 // Event handlers like onClick can't be added to this file
 

@@ -1,3 +1,5 @@
+// REFERENCE: component persistence (doesn't unmount/mount) between pages ----- see: https://github.com/zeit/next.js/pull/4129
+
 import * as React    from 'react';
 import { CoreUtils } from '@core/core-utils';
 
