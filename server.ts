@@ -1,7 +1,6 @@
-const express    = require('express');
-const next       = require('next');
-const fs         = require('fs');
-const routes     = require('./core/routes');
+import express from 'express';
+import next    from 'next';
+import routes  from './core/routes';
 
 const dev     = process.env.NODE_ENV !== 'production';
 const app     = next({ dev });
