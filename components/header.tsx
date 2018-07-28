@@ -1,5 +1,5 @@
-import Link from 'next/link';
-// import { Link } from '../core/routes';
+// import Link from 'next/link';
+import { Link } from '../core/routes';
 
 const linkStyle = {
   marginRight: 15
@@ -7,16 +7,16 @@ const linkStyle = {
 
 const Header = () => (
     <div>
-        <Link href="/">
+        <Link route="/">
           <a style={linkStyle}>Home</a>
         </Link>
-        <Link href="/about">
+        <Link route="/about">
           <a style={linkStyle}>About</a>
         </Link>
-        <Link href="/posts">
+        <Link route="/posts">
           <a style={linkStyle}>Posts</a>
         </Link>
-        <Link href="/shows/shows-list-page" as="/shows">
+        <Link route="shows-list">
           <a style={linkStyle}>Shows</a>
         </Link>
         {/* <Link route = '/shows'>
